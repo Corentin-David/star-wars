@@ -40,7 +40,7 @@ body{
     background: var(--gradient-landing);
     overflow: hidden;
 }
-@media screen and (max-width : 340px){
+@media screen and (max-width : 349px){
     nav{
         padding: 40px 100px;
         display: flex;
@@ -128,14 +128,14 @@ body{
         font-size: 2em; 
         line-height: 15vh;
         z-index: 1;
-        animation: fadeInBottom .5s 1 linear;
+        animation: fadeInBottom 1s 1 linear;
     }
     .centered p{
         position: relative;
         margin: 0;
         width: 100%;
         font-family: 'Josefin Sans', sans-serif;
-        animation: fadeInRight 1s 1 linear;
+        animation: fadeInRight 1.5s 1 linear;
         z-index: 1;
         font-size: .8em;
     }
@@ -149,7 +149,7 @@ body{
     z-index: -1;
     filter: brightness(10%) invert() opacity(.5);
     scale: .6;
-    animation:  blur .5s 1 linear;
+    animation:  blur 1.5s 1 linear;
 }
 @keyframes fadeInBottom {
     0% { opacity: 0; margin: 10vh 0 0 0;}
@@ -296,14 +296,14 @@ section{
         font-size: 3em; 
         line-height: 15vh;
         z-index: 1;
-        animation: fadeInBottom .5s 1 linear;
+        animation: fadeInBottom 1s 1 linear;
     }
     .centered p{
         position: relative;
         margin: 0;
         width: 100%;
         font-family: 'Josefin Sans', sans-serif;
-        animation: fadeInRight 1s 1 linear;
+        animation: fadeInRight 1.5s 1 linear;
         z-index: 1;
         font-size: .8em;
     }
@@ -317,7 +317,7 @@ section{
     z-index: -1;
     filter: brightness(10%) invert() opacity(.5);
     scale: .8;
-    animation: blur .5s 1 linear;
+    animation: blur 1.5s 1 linear;
 }
 @keyframes fadeInBottom {
     0% { opacity: 0; margin: 10vh 0 0 0;}
@@ -469,14 +469,14 @@ section{
         margin: 0;
         font-size: 6em; 
         z-index: 1;
-        animation: fadeInBottom .5s 1 linear;
+        animation: fadeInBottom 1s 1 linear;
     }
     .centered p{
         position: relative;
         margin: 0;
         width: 100%;
         font-family: 'Josefin Sans', sans-serif;
-        animation: fadeInRight 1s 1 linear;
+        animation: fadeInRight 1.5s 1 linear;
         z-index: 1;
     }
 .centered-image{
@@ -614,14 +614,14 @@ nav .logo{
     margin: 0;
     font-size: 5em; 
     z-index: 6;
-    animation: fadeInBottom .5s 1 linear;
+    animation: fadeInBottom 1s 1 linear;
 }
 .centered p{
     position: relative;
     margin: 0;
     width: 100%;
     font-family: 'Josefin Sans', sans-serif;
-    animation: fadeInRight 1s 1 linear;
+    animation: fadeInRight 1.5s 1 linear;
     z-index: 6;
 }
 .centered-image{
@@ -744,14 +744,14 @@ section{
     z-index: 1;
     filter: brightness(10%);
     transition: all .5s;  
-    animation: blur 1s 1 linear;
+    animation: blur 1.5s 1 linear;
 }
 .centered-shadow{
     position: absolute;
     top: 0;
     left: 25vw;
     transition: all.5s;
-    animation: blur 1s 1 linear;
+    animation: blur 1.5s 1 linear;
 
 }
 .centered-image:hover{
