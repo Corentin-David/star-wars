@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+      
+
+    <button class="swipe" id="switch" onclick="toggleTheme()"><img class="side-logo" src="img/jedi-order.svg" width="60" alt="">
+        <svg viewBox="0 0 100 100" width="120">
+            <defs>
+              <path class="circle" id="circle"
+                d="
+                  M 50, 50
+                  m -37, 0
+                  a 37,37 0 1,1 74,0
+                  a 37,37 0 1,1 -74,0"/>
+            </defs>
+            <text>
+              <textPath xlink:href="#circle">
+               Change Order Change Order
+              </textPath>
+            </text>
+          </svg>
+    </button>
+
+<div class="header">
+    <nav>
+        <a href="#" class="logo">@</a>
+        <div class="menu">
+            <a href="#">Shows</a>
+            <a href="#">Games</a>
+            <a href="#">Stories</a>
+            <div class="hello">
+                <a href="#"> Hello there !</a>
+            </div>
+        </div>
+        
+    </nav>
+    <div class="landing-page">
+        <div class="centered">
+            <div class="centered-text">
+            <!-- <h5>Carving Art</h5> -->
+            <h1>LiGht Creates Darkness</h1>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed qui libero laudantium delectus mollitia exercitationem eaque ducimus fugiat veniam id, commodin?</p>
+        </div>
+        <div class="centered-image"><img src="img/vader.png" height="700" alt=""></div>
+        <div class="centered-shadow"><img src="img/vader.png" height="700" alt=""></div>
+        <div class="light"></div>
+    </div> 
+        <div class="bottom">
+            <div class="scroll">
+                <p>SCROLL</p>
+                <div class="scroller"></div>
+            </div>
+            <div class="media">
+                <a href="#"></a>
+                <a href="#"></a>
+                <a href="#"></a>
+            </div>
+        </div>
+    </div>
+</div>
+<section>
+
+</section>
+<script>
+
+
+        // function to set a given theme/color-scheme
+        function setTheme(themeName) {
+            localStorage.setItem('theme', themeName);
+            document.documentElement.className = themeName;
+        }
+
+        // function to toggle between light and dark theme
+        function toggleTheme() {
+            if (localStorage.getItem('theme') === 'theme-red') {
+                setTheme('theme-green');
+                document.querySelector('.centered-image img').src  = 'img/yoda.png';
+                document.querySelector('.centered-shadow img').src  = 'img/yoda.png';
+                document.querySelector('.swipe img').src  = 'img/mudhorn.png';
+            } else if (localStorage.getItem('theme') === 'theme-green') {
+                setTheme('theme-blue');
+                document.querySelector('.centered-image img').src  = 'img/mando.png';
+                document.querySelector('.centered-shadow img').src  = 'img/mando.png';
+                document.querySelector('.swipe img').src  = 'img/sith-order.svg';
+            }else {
+                setTheme('theme-red');
+                document.querySelector('.centered-image img').src  = 'img/vader.png';
+                document.querySelector('.centered-shadow img').src  = 'img/vader.png';
+                document.querySelector('.swipe img').src  = 'img/jedi-order.svg';
+            }
+        }
+
+        // Immediately invoked function to set the theme on initial load
+        (function () {
+            if (localStorage.getItem('theme') === 'theme-red') {
+                setTheme('theme-red');
+                document.querySelector('.centered-image img').src  = 'img/vader.png';
+                document.querySelector('.centered-shadow img').src  = 'img/vader.png';
+                document.querySelector('.swipe img').src  = 'img/jedi-order.svg';
+            } else if (localStorage.getItem('theme') === 'theme-blue') {
+                setTheme('theme-blue');
+                document.querySelector('.centered-image img').src  = 'img/mando.png';
+                document.querySelector('.centered-shadow img').src  = 'img/mando.png';
+                document.querySelector('.swipe img').src  = 'img/sith-order.svg';
+            } else {
+                setTheme('theme-green');
+                document.querySelector('.centered-image img').src  = 'img/yoda.png';
+                document.querySelector('.centered-shadow img').src  = 'img/yoda.png';
+                document.querySelector('.swipe img').src  = 'img/mudhorn.png';
+            }
+        })();
+
+    </script>
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
