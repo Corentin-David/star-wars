@@ -1,0 +1,333 @@
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Display:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+  @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;300;400;500;600;700&display=swap');
+
+  @font-face {
+    font-family: starwars-basic;
+    src: url(star_jedi/starjedi/Starjedi.ttf);
+  } 
+  .theme-red{
+    --bg-color: black;
+    --font: rgb(255, 152, 152);
+    --color3: #4b0000;
+    --color4:rgb(255, 64, 0);
+    --gradient-landing: linear-gradient(#4b0000,#3900007d, #24000068,#000);
+    --img-landing: url(img/vader.png);
+}
+.theme-green{
+    --bg-color: black   ;
+    --font: #8eff8e;
+    --color3: #004e0e;
+    --color4:#00ff00;
+    --gradient-landing: linear-gradient(#004e0e, #003b0b74, #001e057e,#000);
+}
+.theme-blue{
+    --bg-color: black   ;
+    --font: #8fdaff;
+    --color3: #000f53;
+    --color4:#00e1ff;
+    --gradient-landing: linear-gradient(#000f53, #000d47c5, #00002e92,#000);
+}
+body{
+    font-family: 'Josefin Sans', sans-serif;
+    background-color: var(--bg-color);
+    margin: 0;
+    color: var(--font);
+    overflow-x: hidden;
+}
+.header{
+    height: 100vh;
+    background: var(--gradient-landing);
+    overflow: hidden;
+}
+
+/* -----------------------------MEDIA SCREEN MAX 1024-------------------------------------- */
+/* -----------------------------MEDIA SCREEN MAX 1024-------------------------------------- */
+/* -----------------------------MEDIA SCREEN MAX 1024-------------------------------------- */
+/* -----------------------------MEDIA SCREEN MAX 1024-------------------------------------- */
+/* -----------------------------MEDIA SCREEN MAX 1024-------------------------------------- */
+
+@media screen and (max-width : 1023px){
+    nav{
+        padding: 40px 100px;
+        display: flex;
+        flex-direction: row;
+        font-family: 'starwars-basic';
+        font-size: 2em;
+    }
+    nav a{
+        color: var(--font);
+        text-decoration: none;
+    }
+    nav .logo{
+        font-family: 'starwars-basic';
+        font-size: 2em;
+        -webkit-text-stroke: 1px var(--color4) ;
+        color: transparent;
+        margin-left: 37%;
+    }
+    .menu{
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        line-height: 20vh;
+        width: 100vw;
+        height: 100vh;
+        background-color: #000000e0;
+
+    }
+    .menu a{
+        padding: 0 3vh;
+    }
+
+.swipe{
+    display: block;
+    filter: invert();
+    background-color: transparent;
+    border: none;
+    position: absolute;
+    right: 5vw;
+    top: 3%;
+    z-index: 100;
+    cursor: pointer;
+}
+    
+.swipe img{
+    position: absolute;
+    top: 22%;
+    left: 27%;
+}
+textPath{
+    font-family: 'Josefin Sans', sans-serif; 
+    font-size: 1.25em;
+    font-variant-caps: small-caps;
+}
+section{
+    height: 100vh;
+}
+}
+
+
+
+
+/* -----------------------------MEDIA SCREEN MIN 1024-------------------------------------- */
+/* -----------------------------MEDIA SCREEN MIN 1024-------------------------------------- */
+/* -----------------------------MEDIA SCREEN MIN 1024-------------------------------------- */
+/* -----------------------------MEDIA SCREEN MIN 1024-------------------------------------- */
+/* -----------------------------MEDIA SCREEN MIN 1024-------------------------------------- */
+
+@media screen and (min-width : 1024px){
+    
+
+nav{
+    padding: 40px 100px;
+    display: flex;
+    flex-direction: row;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 300;
+}
+nav a{
+    color: var(--font);
+    text-decoration: none;
+}
+nav .logo{
+    font-family: 'starwars-basic';
+    font-size: 2em;
+    -webkit-text-stroke: 1px var(--color4) ;
+    color: transparent;
+    margin-right: 10vw;
+}
+.menu{
+    display: flex;
+    flex-direction: row;
+}
+.menu a{
+    padding: 0 3vh;
+}
+
+.hello {
+    position: absolute;
+    top: 30px;
+    left: 80%;
+    padding: 10px  20px;
+    border: 1px rgba(255, 255, 255, 0.177) solid;
+    border-radius: 40px;
+}
+
+.centered{
+    display: flex;
+    width: 35vw;
+    position: relative;
+    left: 30%;
+    top: 5vh;
+}
+
+.centered h1{
+    position: relative;
+    font-family: 'starwars-basic';
+    margin: 0;
+    font-size: 5em; 
+    z-index: 6;
+    animation: fadeInBottom .5s 1 linear;
+}
+.centered p{
+    position: relative;
+    margin: 0;
+    width: 100%;
+    font-family: 'Josefin Sans', sans-serif;
+    animation: fadeInRight 1s 1 linear;
+    z-index: 6;
+}
+.centered-image{
+    display: none;
+}
+.centered-shadow{
+    position: absolute;
+    top: -10vh;
+    left: 15vw;
+    z-index: -1;
+    filter: brightness(10%) invert() opacity(.5);
+}
+
+
+@keyframes fadeInLeft{
+    0% { opacity: 0; font-size: .2vw}
+    50% { opacity: .1; font-size: .6vw}
+    100% {opacity: 1; font-size: 1vw }
+}
+@keyframes fadeInBottom {
+    0% { opacity: 0; margin: 10vh 0 0 0;}
+    50% { opacity: .1; margin: 5vh 0 0 0;}
+    100% {opacity: 1; margin: 0; }
+}
+@keyframes fadeInRight{
+    0% { opacity: 0; margin: 0 0 0 10vh;}
+    50% { opacity: .1; margin: 0 0 0 5vh;}
+    100% {opacity: 1; margin: 0; }
+}
+@keyframes blur{
+    0% { filter: opacity(0) brightness(0%);}
+    50%{ filter: opacity(.5) brightness(5%);}
+    100%{ filter: opacity(1) brightness(10%);}
+}
+.light{
+    position: absolute;
+    left: 25vw;
+    width: 30vw;
+    height: 15vw;
+    z-index: 0;
+    background-color: var(--color4);
+    filter: blur(200px) opacity(.5);
+    border-radius: 500px;
+    transition: all .5s;
+}
+.bottom{
+    position: absolute;
+    bottom: 0;
+    background-color: var(--bg-color);
+    height: 15vh;
+}
+.scroll{
+    font-family: 'Josefin Sans', sans-serif;
+    writing-mode: vertical-lr;
+    text-orientation: upright;
+    margin-left: 5vw;
+    font-weight: 300;
+    font-size: .8em;
+    color: var(--color4);
+}
+
+.swipe{
+    display: block;
+    filter: invert();
+    background-color: transparent;
+    border: none;
+    position: absolute;
+    right: 5vw;
+    top: 75%;
+    z-index: 100;
+    cursor: pointer;
+}
+
+.swipe img{
+    position: absolute;
+    top: 22%;
+    left: 27%;
+}
+textPath{
+    font-family: 'Josefin Sans', sans-serif; 
+    font-size: 1.25em;
+    font-variant-caps: small-caps;
+}
+
+.swipe:hover svg{
+    animation-name: rotate;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes rotate{
+    from{ transform: rotate(-360deg); }
+    to{ transform: rotate(360deg); }
+}
+
+section{
+    height: 100vh;
+}
+}
+
+/* -----------------------------MEDIA SCREEN 1280-------------------------------------- */
+/* -----------------------------MEDIA SCREEN 1280-------------------------------------- */
+/* -----------------------------MEDIA SCREEN 1280-------------------------------------- */
+/* -----------------------------MEDIA SCREEN 1280-------------------------------------- */
+/* -----------------------------MEDIA SCREEN 1280-------------------------------------- */
+
+@media screen and (min-width : 1280px){
+
+.centered{
+    position: relative;
+    left: 25vw;
+    top: 0;
+}
+.centered h1{
+    position: relative;
+    top: 0;
+    font-size: 6em; 
+}
+
+.centered-image{
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 25vw;
+    z-index: 1;
+    filter: brightness(10%);
+    transition: all .5s;  
+    animation: blur 1s 1 linear;
+}
+.centered-shadow{
+    position: absolute;
+    top: 0;
+    left: 25vw;
+    transition: all.5s;
+}
+.centered-image:hover{
+    filter: brightness(100%);
+    z-index: 10;
+}
+.centered-image:hover ~ .light{
+    background-color: var(--color4);
+    filter: blur(200px) opacity(1);
+}
+.centered-image:hover ~ .centered-shadow{
+    display: block;
+    position: absolute;
+    top: -5vh;
+    left: 15vw;
+}
+}
