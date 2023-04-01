@@ -1,4 +1,4 @@
- @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Display:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Display:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
   @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;300;400;500;600;700&display=swap');
 
@@ -149,8 +149,23 @@ body{
     z-index: -1;
     filter: brightness(10%) invert() opacity(.5);
     scale: .6;
+    animation:  blur .5s 1 linear;
 }
-
+@keyframes fadeInBottom {
+    0% { opacity: 0; margin: 10vh 0 0 0;}
+    50% { opacity: .1; margin: 5vh 0 0 0;}
+    100% {opacity: 1; margin: 0; }
+}
+@keyframes fadeInRight{
+    0% { opacity: 0; margin: 0 0 0 10vh;}
+    50% { opacity: .1; margin: 0 0 0 5vh;}
+    100% {opacity: 1; margin: 0; }
+}
+@keyframes blur{
+    0% { filter: opacity(0) brightness(0%);}
+    50%{ filter: opacity(.5) brightness(5%);}
+    100%{ filter: opacity(1) brightness(10%);}
+}
 .swipe{
     display: block;
     filter: invert();
@@ -302,8 +317,23 @@ section{
     z-index: -1;
     filter: brightness(10%) invert() opacity(.5);
     scale: .8;
+    animation: blur .5s 1 linear;
 }
-
+@keyframes fadeInBottom {
+    0% { opacity: 0; margin: 10vh 0 0 0;}
+    50% { opacity: .1; margin: 5vh 0 0 0;}
+    100% {opacity: 1; margin: 0; }
+}
+@keyframes fadeInRight{
+    0% { opacity: 0; margin: 0 0 0 10vh;}
+    50% { opacity: .1; margin: 0 0 0 5vh;}
+    100% {opacity: 1; margin: 0; }
+}
+@keyframes blur{
+    0% { filter: opacity(0) brightness(0%);}
+    50%{ filter: opacity(.5) brightness(5%);}
+    100%{ filter: opacity(1) brightness(10%);}
+}
 .swipe{
     display: block;
     filter: invert();
@@ -458,8 +488,24 @@ section{
     left: 0;
     z-index: -1;
     filter: brightness(10%) invert() opacity(.5);
+    animation: blur .5s 1 linear;
 }
 
+@keyframes fadeInBottom {
+    0% { opacity: 0; margin: 10vh 0 0 0;}
+    50% { opacity: .1; margin: 5vh 0 0 0;}
+    100% {opacity: 1; margin: 0; }
+}
+@keyframes fadeInRight{
+    0% { opacity: 0; margin: 0 0 0 10vh;}
+    50% { opacity: .1; margin: 0 0 0 5vh;}
+    100% {opacity: 1; margin: 0; }
+}
+@keyframes blur{
+    0% { filter: opacity(0) brightness(0%);}
+    50%{ filter: opacity(.5) brightness(5%);}
+    100%{ filter: opacity(1) brightness(10%);}
+}
 .swipe{
     display: block;
     filter: invert();
@@ -589,12 +635,6 @@ nav .logo{
     filter: brightness(10%) invert() opacity(.5);
 }
 
-
-@keyframes fadeInLeft{
-    0% { opacity: 0; font-size: .2vw}
-    50% { opacity: .1; font-size: .6vw}
-    100% {opacity: 1; font-size: 1vw }
-}
 @keyframes fadeInBottom {
     0% { opacity: 0; margin: 10vh 0 0 0;}
     50% { opacity: .1; margin: 5vh 0 0 0;}
@@ -711,6 +751,8 @@ section{
     top: 0;
     left: 25vw;
     transition: all.5s;
+    animation: blur 1s 1 linear;
+
 }
 .centered-image:hover{
     filter: brightness(100%);
